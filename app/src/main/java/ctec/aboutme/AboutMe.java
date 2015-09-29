@@ -4,13 +4,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Button;
 
 public class AboutMe extends AppCompatActivity {
+
+    private ImageView foodImage;
+    private ImageView introImage;
+    private ImageView animeImage;
+    private ImageView choirImage;
+    private ImageView magicImage;
+    private ImageView gameImage;
+    private Button introButton;
+    private Button foodButton;
+    private Button animeButton;
+    private Button choirButton;
+    private Button magicButton;
+    private Button gameButton;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
+
+        foodImage = (ImageView) findViewById(R.id.introPic);
     }
 
     @Override
@@ -33,5 +54,16 @@ public class AboutMe extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void changeVisibility()
+    {
+        foodImage.setVisibility(View.GONE);
+
+    }
+
+    private void setupListeners()
+    {
+
     }
 }

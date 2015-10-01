@@ -31,7 +31,9 @@ public class AboutMe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
-        foodImage = (ImageView) findViewById(R.id.introPic);
+        foodImage = (ImageView) findViewById(R.id.foodPic);
+        introImage = (ImageView) findViewById(R.id.introPic);
+
     }
 
     @Override
@@ -56,9 +58,34 @@ public class AboutMe extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void changeVisibility()
+    private void changeIntroVisibility()
     {
+        introImage.setVisibility(View.VISIBLE);
         foodImage.setVisibility(View.GONE);
+        animeImage.setVisibility(View.GONE);
+        choirImage.setVisibility(View.GONE);
+        magicImage.setVisibility(View.GONE);
+        gameImage.setVisibility(View.GONE);
+
+
+    }
+    private void changeFoodVisibility()
+    {
+        foodImage.setVisibility(View.VISIBLE);
+        introImage.setVisibility(View.GONE);
+        animeImage.setVisibility(View.GONE);
+        choirImage.setVisibility(View.GONE);
+        magicImage.setVisibility(View.GONE);
+        gameImage.setVisibility(View.GONE);
+    }
+    private void changeAnimeVisibility()
+    {
+        animeImage.setVisibility(View.VISIBLE);
+        foodImage.setVisibility(View.GONE);
+        introImage.setVisibility(View.GONE);
+        choirImage.setVisibility(View.GONE);
+        magicImage.setVisibility(View.GONE);
+        gameImage.setVisibility(View.GONE);
 
     }
 

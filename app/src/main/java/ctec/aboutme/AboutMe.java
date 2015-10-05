@@ -88,6 +88,33 @@ public class AboutMe extends AppCompatActivity {
         gameImage.setVisibility(View.GONE);
 
     }
+    private void changeChoirVisibility()
+    {
+        choirImage.setVisibility(View.VISIBLE);
+        foodImage.setVisibility(View.GONE);
+        introImage.setVisibility(View.GONE);
+        animeImage.setVisibility(View.GONE);
+        magicImage.setVisibility(View.GONE);
+        gameImage.setVisibility(View.GONE);
+    }
+    private void changeMagicVisibility()
+    {
+        magicImage.setVisibility(View.VISIBLE);
+        foodImage.setVisibility(View.GONE);
+        introImage.setVisibility(View.GONE);
+        animeImage.setVisibility(View.GONE);
+        choirImage.setVisibility(View.GONE);
+        gameImage.setVisibility(View.GONE);
+    }
+    private void changeGameVisibility()
+    {
+        gameImage.setVisibility(View.VISIBLE);
+        foodImage.setVisibility(View.GONE);
+        introImage.setVisibility(View.GONE);
+        animeImage.setVisibility(View.GONE);
+        choirImage.setVisibility(View.GONE);
+        magicImage.setVisibility(View.GONE);
+    }
 
     private void setupListeners()
     {

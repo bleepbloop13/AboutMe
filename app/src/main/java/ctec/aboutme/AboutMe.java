@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class AboutMe extends AppCompatActivity {
 
@@ -22,6 +23,7 @@ public class AboutMe extends AppCompatActivity {
     private Button choirButton;
     private Button magicButton;
     private Button gameButton;
+    private TextView infoText;
 
 
 
@@ -66,8 +68,7 @@ public class AboutMe extends AppCompatActivity {
         choirImage.setVisibility(View.GONE);
         magicImage.setVisibility(View.GONE);
         gameImage.setVisibility(View.GONE);
-
-
+        infoText.setText(R.string.intro_text);
     }
     private void changeFoodVisibility()
     {
@@ -77,6 +78,7 @@ public class AboutMe extends AppCompatActivity {
         choirImage.setVisibility(View.GONE);
         magicImage.setVisibility(View.GONE);
         gameImage.setVisibility(View.GONE);
+        infoText.setText(R.string.food_text);
     }
     private void changeAnimeVisibility()
     {
@@ -86,7 +88,7 @@ public class AboutMe extends AppCompatActivity {
         choirImage.setVisibility(View.GONE);
         magicImage.setVisibility(View.GONE);
         gameImage.setVisibility(View.GONE);
-
+        infoText.setText(R.string.anime_text);
     }
     private void changeChoirVisibility()
     {
@@ -96,6 +98,7 @@ public class AboutMe extends AppCompatActivity {
         animeImage.setVisibility(View.GONE);
         magicImage.setVisibility(View.GONE);
         gameImage.setVisibility(View.GONE);
+        infoText.setText(R.string.choir_text);
     }
     private void changeMagicVisibility()
     {
@@ -105,6 +108,7 @@ public class AboutMe extends AppCompatActivity {
         animeImage.setVisibility(View.GONE);
         choirImage.setVisibility(View.GONE);
         gameImage.setVisibility(View.GONE);
+        infoText.setText(R.string.magic_text);
     }
     private void changeGameVisibility()
     {
@@ -114,6 +118,7 @@ public class AboutMe extends AppCompatActivity {
         animeImage.setVisibility(View.GONE);
         choirImage.setVisibility(View.GONE);
         magicImage.setVisibility(View.GONE);
+        infoText.setText(R.string.vg_text);
     }
 
     private void setupListeners()

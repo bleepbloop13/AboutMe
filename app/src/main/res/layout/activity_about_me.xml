@@ -5,78 +5,78 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".AboutMe">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/introPic"
-        android:layout_below="@+id/introText"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/me_in_new_york"
-        android:visibility="visible" />
-
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Intro"
+        android:text="@string/intro_button"
         android:id="@+id/introButton"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignRight="@+id/choiralButton"
-        android:layout_alignEnd="@+id/choiralButton" />
+        android:layout_alignEnd="@+id/choiralButton"
+        android:singleLine="true"
+        android:textSize="12dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Video Games"
+        android:text="@string/vg_button"
         android:id="@+id/vgButton"
         android:layout_above="@+id/animButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:textSize="12dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Card Games"
+        android:text="@string/magic_button"
         android:id="@+id/cgButton"
-        android:layout_alignBottom="@+id/vgButton"
-        android:layout_alignRight="@+id/introPic"
-        android:layout_alignEnd="@+id/introPic"
+        android:singleLine="true"
+        android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/vgButton"
-        android:layout_toEndOf="@+id/vgButton" />
+        android:layout_toEndOf="@+id/vgButton"
+        android:textSize="12dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Choir"
+        android:text="@string/choir_button"
         android:id="@+id/choiralButton"
         android:layout_below="@+id/introButton"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/vgButton"
-        android:layout_toStartOf="@+id/vgButton" />
+        android:layout_toStartOf="@+id/vgButton"
+        android:singleLine="true"
+        android:textSize="12dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Anime"
+        android:text="@string/anime_button"
         android:id="@+id/animButton"
         android:layout_below="@+id/introButton"
         android:layout_alignRight="@+id/vgButton"
         android:layout_alignEnd="@+id/vgButton"
         android:layout_alignLeft="@+id/vgButton"
-        android:layout_alignStart="@+id/vgButton" />
+        android:layout_alignStart="@+id/vgButton"
+        android:singleLine="true"
+        android:textSize="12dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Food"
+        android:text="@string/food_button"
         android:id="@+id/eatButton"
         android:layout_alignBottom="@+id/animButton"
         android:layout_alignRight="@+id/cgButton"
         android:layout_alignEnd="@+id/cgButton"
         android:layout_alignLeft="@+id/cgButton"
-        android:layout_alignStart="@+id/cgButton" />
+        android:layout_alignStart="@+id/cgButton"
+        android:singleLine="true"
+        android:textSize="12dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,54 +85,66 @@
         android:id="@+id/introText"
         android:layout_below="@+id/choiralButton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/introPic"
+        android:visibility="visible"
+        android:background="@drawable/new_intro_pic"
+        android:layout_below="@+id/introText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/vgPic"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="155dp"
-        android:visibility="gone" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cgPic"
-        android:layout_marginBottom="143dp"
         android:visibility="gone"
-        android:layout_alignParentBottom="true"
+        android:background="@drawable/vimeogames"
+        android:layout_below="@+id/introPic"
         android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/choirPic"
-        android:layout_marginBottom="143dp"
+        android:id="@+id/cgPic"
         android:visibility="gone"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/animButton"
-        android:layout_alignStart="@+id/animButton" />
+        android:background="@drawable/mtg_pic"
+        android:layout_below="@+id/introPic"
+        android:layout_alignRight="@+id/eatButton"
+        android:layout_alignEnd="@+id/eatButton"
+        android:layout_marginTop="46dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/choirPic"
+        android:visibility="gone"
+        android:background="@drawable/new_choir_pic"
+        android:layout_below="@+id/introText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="42dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/animePic"
-        android:layout_marginBottom="143dp"
         android:visibility="gone"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/animButton"
-        android:layout_alignStart="@+id/animButton" />
+        android:background="@drawable/anime_pic"
+        android:layout_below="@+id/introPic"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/foodPic"
-        android:layout_marginBottom="143dp"
         android:visibility="gone"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/choiralButton"
-        android:layout_toEndOf="@+id/choiralButton" />
+        android:background="@drawable/beef_pic"
+        android:layout_below="@+id/introPic"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -35,6 +35,19 @@ public class AboutMe extends AppCompatActivity {
 
         foodImage = (ImageView) findViewById(R.id.foodPic);
         introImage = (ImageView) findViewById(R.id.introPic);
+        animeImage = (ImageView) findViewById(R.id.animePic);
+        choirImage = (ImageView) findViewById(R.id.choirPic);
+        magicImage = (ImageView) findViewById(R.id.cgPic);
+        gameImage = (ImageView) findViewById(R.id.vgPic);
+        introButton = (Button) findViewById(R.id.introButton);
+        foodButton = (Button) findViewById(R.id.eatButton);
+        animeButton = (Button) findViewById(R.id.animButton);
+        choirButton = (Button) findViewById(R.id.choiralButton);
+        magicButton = (Button) findViewById(R.id.cgButton);
+        gameButton = (Button) findViewById(R.id.vgButton);
+        infoText = (TextView) findViewById(R.id.introText);
+
+        setupListeners();
 
     }
 
@@ -122,7 +135,59 @@ public class AboutMe extends AppCompatActivity {
     }
 
     private void setupListeners()
-    {
+   {
+        introButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+           public void onClick(View buttonView)
+            {
+                changeIntroVisibility();
+            }
+        });
 
+        foodButton.setOnClickListener(new View.OnClickListener()
+        {
+          @Override
+            public void onClick(View buttonView)
+           {
+               changeFoodVisibility();
+           }
+        });
+
+        animeButton.setOnClickListener(new View.OnClickListener()
+        {
+          @Override
+            public void onClick(View buttonView)
+            {
+                changeAnimeVisibility();
+            }
+        });
+
+        choirButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View buttonView)
+            {
+                changeChoirVisibility();
+            }
+        });
+
+        magicButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View buttonView)
+            {
+                changeMagicVisibility();
+            }
+        });
+
+        gameButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View buttonView)
+            {
+                changeGameVisibility();
+            }
+        });
     }
 }

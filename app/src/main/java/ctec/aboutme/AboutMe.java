@@ -8,7 +8,13 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Button;
 import android.widget.TextView;
+import android.graphics.Typeface;
 
+/**
+ * @author Rory Baker
+ * @version 2.0, 11/20/2015 Added new font to in app text.
+ *  This app shows various images and a textView to give information about my life.
+ */
 public class AboutMe extends AppCompatActivity {
 
     private ImageView foodImage;
@@ -26,13 +32,15 @@ public class AboutMe extends AppCompatActivity {
     private TextView infoText;
 
 
-
-
+    /**
+     * Creates the app, casts a view to each object.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about_me);
 
+        //Casting views to buttons
         foodImage = (ImageView) findViewById(R.id.foodPic);
         introImage = (ImageView) findViewById(R.id.introPic);
         animeImage = (ImageView) findViewById(R.id.animePic);
@@ -47,6 +55,10 @@ public class AboutMe extends AppCompatActivity {
         gameButton = (Button) findViewById(R.id.vgButton);
         infoText = (TextView) findViewById(R.id.introText);
 
+        //Calls the setupText method to change fonts.
+        setupText();
+
+        //Calls the setup Listeners method to make buttons work.
         setupListeners();
 
     }
@@ -73,6 +85,9 @@ public class AboutMe extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Makes the intro image visible, sets all other images to gone, and changes the text.
+     */
     private void changeIntroVisibility()
     {
         introImage.setVisibility(View.VISIBLE);
@@ -83,6 +98,10 @@ public class AboutMe extends AppCompatActivity {
         gameImage.setVisibility(View.GONE);
         infoText.setText(R.string.intro_text);
     }
+
+    /**
+     * Makes the food image visible, sets all other images to gone, and changes the text.
+     */
     private void changeFoodVisibility()
     {
         foodImage.setVisibility(View.VISIBLE);
@@ -93,6 +112,10 @@ public class AboutMe extends AppCompatActivity {
         gameImage.setVisibility(View.GONE);
         infoText.setText(R.string.food_text);
     }
+
+    /**
+     * Makes the food image visible, sets all other images to gone, and changes the text.
+     */
     private void changeAnimeVisibility()
     {
         animeImage.setVisibility(View.VISIBLE);
@@ -103,6 +126,10 @@ public class AboutMe extends AppCompatActivity {
         gameImage.setVisibility(View.GONE);
         infoText.setText(R.string.anime_text);
     }
+
+    /**
+     * Makes the Choir image visible, sets all other images to gone, and changes the text.
+     */
     private void changeChoirVisibility()
     {
         choirImage.setVisibility(View.VISIBLE);
@@ -113,6 +140,10 @@ public class AboutMe extends AppCompatActivity {
         gameImage.setVisibility(View.GONE);
         infoText.setText(R.string.choir_text);
     }
+
+    /**
+     * Makes the magic image visible, sets all other images to gone, and changes the text.
+     */
     private void changeMagicVisibility()
     {
         magicImage.setVisibility(View.VISIBLE);
@@ -123,6 +154,10 @@ public class AboutMe extends AppCompatActivity {
         gameImage.setVisibility(View.GONE);
         infoText.setText(R.string.magic_text);
     }
+
+    /**
+     * Makes the video game image visible, sets all other images to gone, and changes the text.
+     */
     private void changeGameVisibility()
     {
         gameImage.setVisibility(View.VISIBLE);
@@ -134,6 +169,9 @@ public class AboutMe extends AppCompatActivity {
         infoText.setText(R.string.vg_text);
     }
 
+    /**
+     * Adds listeners to each, and calls a method when they are pressed.
+     */
     private void setupListeners()
    {
         introButton.setOnClickListener(new View.OnClickListener()
@@ -189,5 +227,16 @@ public class AboutMe extends AppCompatActivity {
                 changeGameVisibility();
             }
         });
+    }
+
+    /**
+     * Changes the font of the in-app text to Comic Sans MS.
+     */
+    private void setupText()
+    {
+        //creates the font from the ttf file in the assets/fonts folder.
+        Typeface comicFont = Typeface.createFromAsset(getAssets(), "fonts/comic_sans.ttf");
+        //sets the font for the textView to Comic Sans MS.
+        infoText.setTypeface(comicFont);
     }
 }
